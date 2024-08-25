@@ -11,7 +11,7 @@ $(call inherit-product, device/doogee/P3/device.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Product Specifics
-PRODUCT_NAME := twrp_P3
+PRODUCT_NAME := fox_P3
 PRODUCT_DEVICE := P3
 PRODUCT_BRAND := DOOGEE
 PRODUCT_MODEL := P3
