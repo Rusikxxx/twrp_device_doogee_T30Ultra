@@ -206,10 +206,6 @@ on post-fs
     restorecon_recursive /vendor/persist
 
 on fs
-    chown system system /mnt/vendor/persist
-    chmod 0771 /mnt/vendor/persist
-    restorecon /mnt/vendor/persist
-
     chmod 0660 /dev/teei_client
     chown system system /dev/teei_client
     chmod 0660 /dev/teei_config
@@ -224,10 +220,10 @@ on fs
     chown system drmrpc /dev/ut_keymaster
     chmod 0660 /dev/ut_keymaster
     # rpmb device
-    chmod 0660 /dev/0:0:0:49476
-    chown system system /dev/0:0:0:49476
     chmod 0660 /dev/rpmb0
     chown system system /dev/rpmb0
+    chmod 0660 /dev/mmcblk0rpmb
+    chown root system /dev/mmcblk0rpmb
     # legacy rpmb device for cross-platform compatibility
     chmod 0660 /dev/emmcrpmb0
     chown system system /dev/emmcrpmb0
@@ -239,7 +235,3 @@ on fs
 
 on property:vendor.crypto.fake_encrypt=1 && property:vold.post_fs_data_done=1
     setprop vendor.soter.teei.crypto.state unencrypted
-
-on post-fs-data
-    setprop vendor.soter.teei.logini "start"
-
