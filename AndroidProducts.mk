@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_P3.mk
+    $(LOCAL_DIR)/fox_P3.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_P3-user \
-    twrp_P3-userdebug \
-    twrp_P3-eng
+    fox_P3-user \
+    fox_P3-userdebug \
+    fox_P3-eng
