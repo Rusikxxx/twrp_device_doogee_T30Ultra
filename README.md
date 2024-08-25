@@ -5,7 +5,7 @@ This branch fox_12.1 has ***encrypt/decrypt*** files and option to more test wit
 [![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ### Firmware version:
-DOOGEE-T30Ultra-RU-Android13.0-20240102-user.zip - alps-mp-s0.mp1-V15.0.2
+DOOGEE-T30Ultra-RU-Android13.0-20240102-user.zip - DOOGEE-T30Ultra-RU-Android13.0-20240102
 
 ## Device
 
