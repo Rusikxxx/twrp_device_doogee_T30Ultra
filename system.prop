@@ -1,0 +1,20 @@
+####### generate by lopestom #######
+# Fstab
+ro.postinstall.fstab.prefix=/system
+# USB MTP
+ro.sys.usb.storage.type=mtp
+# MTK
+ro.vendor.mediatek.platform=MT6789
+# from device
+ro.vendor.lcm_rotation=1
+#ro.surface_flinger.primary_display_orientation=ORIENTATION_180
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+# TEE & Gatekeeper & Keymaster
+ro.vendor.mtk_tee_gp_support=1
+ro.vendor.mtk_svp_on_mtee_support=2
+ro.hardware.kmsetkey=beanpod
+ro.hardware.gatekeeper=beanpod
+ro.vendor.mtk_microtrust_tee_support=1
+keymaster_ver=4.1
+####### generate by lopestom #######
