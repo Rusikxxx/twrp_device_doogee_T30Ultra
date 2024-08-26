@@ -167,7 +167,7 @@ TW_LOAD_VENDOR_BOOT_MODULES := true
 #TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone29/temp
 
 # Resolution
-TW_THEME := landscape_hdpi
+TW_THEME := portrait_hdpi
 TARGET_SCREEN_WIDTH := 2560
 TARGET_SCREEN_HEIGHT := 1600
 
