@@ -27,8 +27,8 @@ void vendor_load_properties()
         property_override(string("ro.product.") + prop + string("brand"), "DOOGEE");
         property_override(string("ro.product.") + prop + string("name"), "P3_RU");
         property_override(string("ro.product.") + prop + string("device"), "P3");
-        property_override(string("ro.product.") + prop + string("model"), "P3");
+        property_override(string("ro.product.") + prop + string("model"), "T30Ultra");
         property_override(string("ro.product.") + prop + string("manufacturer"), "DOOGEE");
-        property_override(string("ro.product.system.") + prop + string("device"), "mgvi_P3_RU");
+        property_override(string("ro.product.system.") + prop + string("device"), "mt6789");
     }
 }
