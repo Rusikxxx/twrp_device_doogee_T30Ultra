@@ -171,9 +171,6 @@ TW_THEME := landscape_hdpi
 TARGET_SCREEN_WIDTH := 1600
 TARGET_SCREEN_HEIGHT := 2560
 
-
-
-
 # Screen density
 TARGET_SCREEN_DENSITY := 320
 
