@@ -2,7 +2,6 @@
 
 FDEVICE="P3"
 
-
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep \"$FDEVICE\")
    if [ -n "$chkdev" ]; then
@@ -19,7 +18,6 @@ fi
 
 export DEVICE="P3"
 export OEM="DOOGEE"
-
 
 export OF_DISABLE_OTA_MENU=1
 export FOX_AB_DEVICE=1
