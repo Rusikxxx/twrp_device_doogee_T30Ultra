@@ -26,6 +26,9 @@
 /dev/block/by-name/md1img_b  0640    root    system
 /dev/block/by-name/md1dsp    0660    root    system
 /dev/block/by-name/boot_para 0640    root    system
+# add by xyx 2023/07/26 add new partition zlintek
+/dev/block/by-name/zlintek   0640    root    system
+# end xyx
 
 # OTP
 /dev/otp                  0660   system     system
