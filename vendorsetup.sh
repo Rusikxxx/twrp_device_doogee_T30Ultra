@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FDEVICE="T30Ultra"
-export DEVICE="T30Ultra"
+FDEVICE="P3"
+export DEVICE="P3"
 export OEM="DOOGEE"
 
 
