@@ -14,7 +14,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 PRODUCT_NAME := twrp_P3
 PRODUCT_DEVICE := P3
 PRODUCT_BRAND := DOOGEE
-PRODUCT_MODEL := P3
+PRODUCT_MODEL := T30Ultra
 PRODUCT_MANUFACTURER := DOOGEE
 
 PRODUCT_GMS_CLIENTID_BASE := android-doogee
