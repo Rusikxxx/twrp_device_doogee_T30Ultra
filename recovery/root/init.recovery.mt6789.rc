@@ -81,13 +81,15 @@ service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-ser
 
 service vendor.keymint-beanpod /vendor/bin/hw/android.hardware.security.keymint@1.0-service.beanpod
     class early_hal
-    interface android.hardware.keymaster@4.0::IKeymasterDevice default
-    interface android.hardware.keymaster@4.1::IKeymasterDevice default
     user nobody
     seclabel u:r:recovery:s0
 
 on property:crypto.ready=1
     start vendor.keymint-beanpod
+
+on property:vendor.sys.listener.registered=true
+    start vendor.keymint-beanpod
+    start vendor.gatekeeper-1-0
 
 on property:hwservicemanager.ready=true
     start teei_daemon
@@ -113,11 +115,6 @@ on property:crypto.ready=0
     stop teei_daemon
     stop vendor.gatekeeper-1-0
     stop vendor.keymint-beanpod
-
-on post-fs-data
-    mkdir /data/vendor_de 0770 system system
-    mkdir /data/vendor_de/0 0770 system system
-    mkdir /data/vendor_de/0/cryptoeng 0770 system system
 
     start health-hal-2-1
     setprop sys.usb.config adb
