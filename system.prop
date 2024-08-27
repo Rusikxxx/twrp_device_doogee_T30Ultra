@@ -6,7 +6,7 @@ ro.sys.usb.storage.type=mtp
 # MTK
 ro.vendor.mediatek.platform=MT6789
 # from device
-ro.vendor.lcm_rotation=1
+#ro.vendor.lcm_rotation=1
 #ro.surface_flinger.primary_display_orientation=ORIENTATION_180
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
