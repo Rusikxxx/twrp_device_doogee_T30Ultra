@@ -15,6 +15,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Enable userspace reboot
+$(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
+
 # Enable Virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
@@ -52,6 +55,14 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh
+
+# Userspace merge is enabled by default on devices launching with 13 and higher.
+PRODUCT_VENDOR_PROPERTIES += ro.virtual_ab.userspace.snapshots.enabled=true
+
+# Force USB FFS AIO compat - HACK: Avoid usb crash
+PRODUCT_PRODUCT_PROPERTIES += \
+	persist.adb.nonblocking_ffs=0 \
+	ro.adb.nonblocking_ffs=0 \
 
 PRODUCT_PROPERTY_OVERRIDES += ro.twrp.vendor_boot=true
 
