@@ -1,4 +1,7 @@
  on boot
  #Added Manual For Microtrust
-    mkdir /mnt/vendor/persist
-    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+#    mkdir /mnt/vendor/persist
+#    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+
+    mkdir /mnt/vendor/persist 0700 root root
+    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist
