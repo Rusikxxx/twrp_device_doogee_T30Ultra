@@ -5,6 +5,9 @@ ro.postinstall.fstab.prefix=/system
 ro.sys.usb.storage.type=mtp
 # MTK
 ro.vendor.mediatek.platform=MT6789
+ro.vendor.mtk_f2fs_enable=1
+ro.vendor.mtk_emmc_support=1
+ro.hardware.egl=meow
 # from device
 #ro.vendor.lcm_rotation=1
 #ro.surface_flinger.primary_display_orientation=ORIENTATION_180
