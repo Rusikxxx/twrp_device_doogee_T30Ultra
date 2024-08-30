@@ -20,7 +20,7 @@ on:
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch' # Your Device Tree Branch, make sure it's right.
         required: true
-        default: 'twrp-12.1'
+        default: 'twrp-12.2'
       DEVICE_PATH:
         description: 'Specify your Device Path' # As is, just like your DEVICE_PATH in your BoardConfig.mk
         required: true
@@ -169,15 +169,15 @@ jobs:
       run: |
         git clone https://github.com/cd-Spidey/Random ./ldcheck
         cd ldcheck/extract-tools
-        mv -n qseecomd ${GITHUB_WORKSPACE}/workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root/system/bin/
-        mv -n libneeds ${GITHUB_WORKSPACE}/workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root/
-        mv -n ldcheck ${GITHUB_WORKSPACE}/workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root/
+        mv -n teei_daemon twrp/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root/vendor/bin/
+        mv -n libneeds twrp/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root/
+        mv -n ldcheck twrp/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root/
         echo "Done moving essentials in checking missing dependencies."
       continue-on-error: true
 
     - name: Run LDCheck
       run: |
-        cd workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root
+        cd twrp/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root
         python3 ldcheck -p system/lib64:vendor/lib64 -d ${{ github.event.inputs.LDCHECK }}
         echo "Done checking missing dependencies. Review, and reconfigure your tree."
       continue-on-error: true
