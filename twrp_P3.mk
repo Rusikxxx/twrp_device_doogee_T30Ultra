@@ -28,7 +28,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device specific configs.
-$(call inherit-product, device/doogee/P3/device/device.mk)
+$(call inherit-product, device/doogee/P3/device.mk)
 
 ## Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := P3
