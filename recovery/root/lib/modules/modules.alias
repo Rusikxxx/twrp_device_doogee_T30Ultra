@@ -85,6 +85,8 @@ alias of:N*T*Cmediatek,mt8183-pwrap mtk_pmic_wrap
 alias of:N*T*Cmediatek,mt8183-pwrapC* mtk_pmic_wrap
 alias of:N*T*Cmediatek,mt8516-pwrap mtk_pmic_wrap
 alias of:N*T*Cmediatek,mt8516-pwrapC* mtk_pmic_wrap
+alias of:N*T*Cfocaltech,fts focaltech_touch
+alias of:N*T*Cfocaltech,ftsC* focaltech_touch
 alias of:N*T*Cxzgrn0819a_it6112_wqxga_dsi panel_xzgrn0819a_it611x_wqxga_dsi_vdo
 alias of:N*T*Cxzgrn0819a_it6112_wqxga_dsiC* panel_xzgrn0819a_it611x_wqxga_dsi_vdo
 alias of:N*T*Cmediatek,mt2712-i2c i2c_mt65xx

@@ -1,30 +1,22 @@
-####### generate by lopestom #######
 # Fstab
 ro.postinstall.fstab.prefix=/system
 # USB MTP
 ro.sys.usb.storage.type=mtp
-# MTK
-ro.vendor.mediatek.platform=MT6789
-ro.vendor.mtk_f2fs_enable=1
-ro.vendor.mtk_emmc_support=1
-ro.hardware.egl=meow
-# from device
-#ro.vendor.lcm_rotation=1
-#ro.surface_flinger.primary_display_orientation=ORIENTATION_180
+# identity
+Build.BRAND=MTK
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
-#
-ro.crypto.metadata.enabled=true
-ro.crypto.support_metadata_encrypt=true
-ro.crypto.uses_fs_ioc_add_encryption_key=true
-ro.crypto.volume.metadata.method=dm-default-key
-ro.crypto.dm_default_key.options_format.version=2
-ro.crypto.volume.options=::v2
 # TEE & Gatekeeper & Keymaster
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_svp_on_mtee_support=2
 ro.hardware.kmsetkey=beanpod
 ro.hardware.gatekeeper=beanpod
 ro.vendor.mtk_microtrust_tee_support=1
-keymaster_ver=4.1
-####### generate by lopestom #######
+# HideReflashTWRP
+ro.twrp.vendor_boot=true
+# MTK
+ro.vendor.mediatek.platform=MT6789
+# from device
+ro.vendor.mtk_f2fs_enable=1
+ro.vendor.mtk_emmc_support=1
+ro.hardware.egl=meow
