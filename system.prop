@@ -14,6 +14,7 @@ ro.hardware.gatekeeper=beanpod
 ro.vendor.mtk_microtrust_tee_support=1
 # HideReflashTWRP
 ro.twrp.vendor_boot=true
+fbe.metadata.wrappedkey=true
 # MTK
 ro.vendor.mediatek.platform=MT6789
 # from device
