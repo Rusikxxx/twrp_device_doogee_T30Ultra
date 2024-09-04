@@ -1,4 +1,4 @@
-import /microtrust.rc
+import /init.microtrust.rc
 import /init.recovery.project.rc
 
 on init
