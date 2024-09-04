@@ -95,10 +95,10 @@ jobs:
       with:
        files: | 
          twrp/out/target/product/P3/*boot*.img
-       name: Unofficial TWRP for $DEVICE - ${{ env.BUILD_DATE }}
+       name: Unofficial TWRP for P3 - $(date +"%Y%m%d")
        tag_name: ${{ github.run_id }}
        body: |
          MANIFEST: twrp-12.1
-         Device: $DEVICE
-         Build: $TARGET
+         Device: P3
+         Build: vendor_bootimage
          DT Branch: twrp-12.3
