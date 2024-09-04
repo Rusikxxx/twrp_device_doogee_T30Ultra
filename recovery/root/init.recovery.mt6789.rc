@@ -100,9 +100,10 @@ on property:crypto.ready=0
     stop vendor.keymint-beanpod
     stop vendor.gatekeeper-1-0
 
-on boot
+on post-fs-data
     start health-hal-2-1
     setprop sys.usb.config adb
 
+on boot
     mkdir /mnt/vendor/persist
     mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
