@@ -15,7 +15,7 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-12.1
   DEVICE: P3
-  DT_LINK: https://github.com/lopestom/twrp_device_doogee_T30Ultra
+  DT_LINK: https://github.com/lopestom/twrp_device_ulefone_Armor_12S
   DT_PATH: device/doogee/P3
   TARGET: vendorbootimage
   TZ: Asia/manila
@@ -86,7 +86,11 @@ jobs:
        PATH=~/bin:$PATH
        cd twrp
        export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_P3-eng && mka $TARGET -j$(nproc --all)
-       cp  out/target/product/P3/vendor_boot.img    out/target/product/P3/vendor_boot-P3-$(date +"%Y%m%d").img  
+       cp  out/target/product/P3/vendor_boot.img    out/target/product/P3/vendor_boot-T30Ultra-$(date +"%Y%m%d").img  
+
+    - name: Set Build Date # Output will be use in Release
+      run: |
+        echo "BUILD_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
              
     - name: Release recovery image
       uses: softprops/action-gh-release@v2
@@ -95,10 +99,10 @@ jobs:
       with:
        files: | 
          twrp/out/target/product/P3/*boot*.img
-       name: Unofficial TWRP for P3 - $(date +"%Y%m%d")
+       name: Unofficial TWRP for Doogee T30Ultra - ${{ env.BUILD_DATE }}
        tag_name: ${{ github.run_id }}
        body: |
          MANIFEST: twrp-12.1
          Device: P3
          Build: vendor_bootimage
-         DT Branch: twrp-12.3
+         DT Branch: twrp-doogee
