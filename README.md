@@ -1,6 +1,6 @@
 ### TWRP device tree for Doogee T30 Ultra (aka P3)- kernel 5.10.185
 
-This branch fox_12.1 has ***encrypt/decrypt*** files and option to more test with that. 
+This branch has ***encrypt/decrypt*** files and option to more test with that. 
 
 [![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
@@ -60,7 +60,7 @@ Some tests was made:
 
 - [Котфуций 🐾](https://4pda.to/forum/index.php?showuser=2166242) aka @Rusikxxx
 - [TeamWin](https://github.com/TeamWin) for TWRP SC.
-  * TWRP version 3.7.0_12
+  * TWRP version 3.7.1_12
 
 -----
 

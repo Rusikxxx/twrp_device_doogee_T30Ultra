@@ -14,11 +14,6 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/doogee/P3
-
-# define hardware platform
-PRODUCT_PLATFORM := mt6789
-
 # API
 PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_TARGET_VNDK_VERSION := 31
@@ -26,15 +21,15 @@ PRODUCT_TARGET_VNDK_VERSION := 31
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Enable snapuserd
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
+
 # Enable project quotas and casefolding for emulated storage without sdcardfs - SDCard replacement functionality
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Virtual A/B
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
-
 
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -44,10 +39,7 @@ AB_OTA_PARTITIONS := \
     system_ext \
     product \
     vendor \
-    vendor_dlkm \
     odm \
-    odm_dlkm \
-    vendor_boot \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor
@@ -70,24 +62,15 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-mtkimpl \
     android.hardware.boot@1.2-mtkimpl.recovery
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service
 
 PRODUCT_PACKAGES_DEBUG += \
-    bootctrl \
-    update_engine_client
-
-PRODUCT_PACKAGES += \
-    bootctrl.$(PRODUCT_PLATFORM) \
-    bootctrl.$(PRODUCT_PLATFORM).recovery
+    bootctrl
 
 # Fastbootd
 PRODUCT_PACKAGES += \
-#    android.hardware.fastboot@1.1-impl-mock \
-#    android.hardware.fastboot@1.1-impl-mock.recovery \
-#    android.hardware.fastboot@1.0-impl-mock \
-#    fastbootd
+    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery \
+    fastbootd
 
 # Health
 PRODUCT_PACKAGES += \
@@ -120,13 +103,13 @@ PRODUCT_PACKAGES += \
 # Additional target Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
     android.hardware.keymaster@4.1
+    
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_Armor_12S
+TARGET_RECOVERY_DEVICE_MODULES := libinit_Armor_12S
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@4.1.so
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_P3
-TARGET_RECOVERY_DEVICE_MODULES := libinit_P3
 
 # Recovery: Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
@@ -136,4 +119,3 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
-
