@@ -36,11 +36,11 @@ Some tests was made:
 
 - MT6789 - A12
   - Status: booted??
-  - [?] booted
+  - [X] booted
 
    - vendor_boot-P3-2024mmdd.img => Working?? Not working?
-  - [?] Working
-  - [?] CPU/temperature correct
+  - [X] Working
+  - [X] CPU/temperature correct
   - [ ] Vibrator module - not work
 
 </p>
@@ -49,10 +49,14 @@ Some tests was made:
 <details><summary>TWRP Pictures - Click to open</summary>
 <p>
 
-![Menu](https://github.com/lopestom/twrp_device_IIIF150_P3/)
-![Backup](https://github.com/lopestom/twrp_device_IIIF150_P3/)
+![IMG_20240903_184122_resized](https://github.com/user-attachments/assets/09c875ed-059c-445d-af07-aa563dd7d107)
+![Screenshot_2024-09-05-18-55-01_resized](https://github.com/user-attachments/assets/c424abaf-4b01-4b1c-ab16-fe3b9f554778)
+![Screenshot_2024-09-05-19-33-56_resized](https://github.com/user-attachments/assets/0dafca03-c4ee-413c-b415-3d8578ba59c0)
+![Screenshot_2024-09-05-18-35-08_resized](https://github.com/user-attachments/assets/5cb4f714-d4a4-4c56-912d-73d03b32883c)
+![Screenshot_2024-09-05-18-35-40_resized](https://github.com/user-attachments/assets/e5ab617a-c04a-4eeb-9a59-19395747fa40)
+![Screenshot_2024-09-05-18-34-58_resized](https://github.com/user-attachments/assets/23f0a8e3-4417-4659-8001-a9e04401e7e2)
+![IMG_20240905_182600_resized](https://github.com/user-attachments/assets/79110525-079d-4298-a2c9-db7cec720bf3)
 
-![Storage](https://github.com/lopestom/twrp_device_IIIF150_P3/)
 </p>
 </details>
 
