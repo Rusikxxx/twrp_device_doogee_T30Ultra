@@ -66,6 +66,9 @@ export OF_STATUS_INDENT_RIGHT=48
 export OF_ALLOW_DISABLE_NAVBAR=0
 export OF_CLOCK_POS=1
 
+# Language
+export TW_DEFAULT_LANGUAGE="ru"
+
 # Backup
 export OF_QUICK_BACKUP_LIST="/boot;/vendor_boot;/data;/nvram;/protect_f;/protect_s;/persist;"
 
