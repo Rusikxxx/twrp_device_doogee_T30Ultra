@@ -19,7 +19,7 @@ on:
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'fox_12.1'
+        default: 'fox_12.2'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
@@ -37,7 +37,7 @@ on:
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME'
         required: true
-        default: 'fox_P3'
+        default: 'twrp_P3'
       BUILD_TARGET:
         description: 'BUILD_TARGET'
         required: true
