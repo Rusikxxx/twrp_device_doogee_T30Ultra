@@ -111,7 +111,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_P3
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@4.1.so
 
-# Recovery: Additional Libraries
+# Recovery: Additional Libraries - KEYMASTER DEPENDENCIES
 TARGET_RECOVERY_DEVICE_MODULES += \
     libion \
     libxml2
